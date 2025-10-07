@@ -114,7 +114,8 @@
 	max-width: 520px;
 }
 .hero__subtitle {
-	color: #b197b3;
+	font-size: 20px;
+	color: var(--accent-color);
 	text-transform: uppercase;
 	line-height: 1.6;
 	margin-bottom: 20px;
@@ -127,7 +128,7 @@
 }
 .hero__subtitle span::after {
 	content: '';
-	background: #b197b3;
+	background: var(--accent-color);
 	border-radius: 50%;
 	width: 4px;
 	height: 4px;

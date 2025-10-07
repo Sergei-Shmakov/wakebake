@@ -128,9 +128,12 @@
 	width: 100%;
 	border-radius: 100px;
 	background: #ffe0cb;
-	height: 7px;
+	height: 8.5px;
 }
 .swiper-scrollbar-drag {
 	border-radius: 100px;
 	background: #ffa55c;
+}
+.testimonials__text {
+	font-size: 20px;
 }

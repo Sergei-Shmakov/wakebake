@@ -113,6 +113,10 @@
 			nextEl: '.gallery__next',
 			prevEl: '.gallery__prev',
 		},
+		autoplay: {
+			delay: 1500,
+			disableOnInteraction: true,
+		},
 		breakpoints: {
 			601: {
 				slidesPerView: 3,
@@ -132,6 +136,7 @@
 		spaceBetween: 0,
 		slidesPerView: 1,
 		centeredSlides: true,
+		initialSlide: 1,
 
 		navigation: {
 			nextEl: '.testimonials__next',
@@ -139,7 +144,9 @@
 		},
 		scrollbar: {
 			el: '.swiper-scrollbar',
+			draggable: 'true',
 		},
+
 		breakpoints: {
 			// 601: {
 			// 	slidesPerView: 3,
