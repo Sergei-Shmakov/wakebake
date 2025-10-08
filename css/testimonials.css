@@ -137,3 +137,9 @@
 .testimonials__text {
 	font-size: 20px;
 }
+.testimonials-image{
+	align-self:center;
+}
+.testimonials-image img{
+	max-height: 250px
+}
