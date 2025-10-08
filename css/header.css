@@ -7,7 +7,7 @@
 	padding-top: 18px;
 }
 .header-logo {
-	max-width: 174px;
+	max-width: 250px;
 	z-index: 11;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -202,3 +202,4 @@
 .hero__img-button:hover::before {
 	opacity: 1;
 }
+
