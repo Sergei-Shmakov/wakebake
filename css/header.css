@@ -143,6 +143,7 @@
 }
 .hero__text {
 	margin-bottom: 40px;
+	margin-top: 15px;
 	max-width: 360px;
 }
 .hero__button {
@@ -202,4 +203,3 @@
 .hero__img-button:hover::before {
 	opacity: 1;
 }
-

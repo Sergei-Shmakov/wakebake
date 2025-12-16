@@ -102,6 +102,7 @@
 
 	//slider-gallery
 	new Swiper('.gallery__slider', {
+		loop: true,
 		spaceBetween: 15,
 		slidesPerView: 1.5,
 		pagination: {
@@ -138,10 +139,6 @@
 		centeredSlides: true,
 		initialSlide: 1,
 
-		navigation: {
-			nextEl: '.testimonials__next',
-			prevEl: '.testimonials__prev',
-		},
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			draggable: 'true',
@@ -165,4 +162,53 @@
 	const telInputs = document.querySelectorAll('input[type="tel"]')
 	const im = new Inputmask('+7 (999) 999-99-99')
 	im.mask(telInputs)
+
+	//storage
+	document.addEventListener('DOMContentLoaded', function () {
+		const formContact = document.getElementById('contact__form')
+		const formGift = document.getElementById('modal__form')
+
+		if (formContact) {
+			const CONTACT_KEY = 'contactFormData'
+
+			formContact.addEventListener('submit', function (e) {
+				e.preventDefault()
+
+				const formData = {
+					name: formContact.elements.fieldInput?.value || '',
+					tel: formContact.elements.contactInput?.value || '',
+					createdAt: Date.now(),
+				}
+
+				const stored = localStorage.getItem(CONTACT_KEY)
+				const data = stored ? JSON.parse(stored) : []
+
+				data.push(formData)
+				localStorage.setItem(CONTACT_KEY, JSON.stringify(data))
+
+				formContact.reset()
+			})
+		}
+
+		if (formGift) {
+			const GIFT_KEY = 'giftFormData'
+
+			formGift.addEventListener('submit', function (e) {
+				e.preventDefault()
+
+				const formData = {
+					email: formGift.elements.modalFormInput?.value || '',
+					createdAt: Date.now(),
+				}
+
+				const stored = localStorage.getItem(GIFT_KEY)
+				const data = stored ? JSON.parse(stored) : []
+
+				data.push(formData)
+				localStorage.setItem(GIFT_KEY, JSON.stringify(data))
+
+				formGift.reset()
+			})
+		}
+	})
 })()

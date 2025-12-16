@@ -49,10 +49,6 @@
 					<div class="container">
 						<div class="hero__inner">
 							<div class="hero__content">
-								<div class="hero__subtitle">
-									<span>Старт</span>
-									<span>26.06.2023</span>
-								</div>
 								<h1 class="hero__title title">
 									Научитесь печь торты и десерты с нуля
 								</h1>
@@ -1042,10 +1038,10 @@
 									Заполните контактные данные, и наш менеджер свяжется с вами в
 									ближайшее время
 								</p>
-								<form class="contact__form">
+								<form class="contact__form" id="contact__form">
 									<label class="contact__label field">
 										<input
-											name="field-input"
+											name="fieldInput"
 											type="text"
 											class="field__input"
 											placeholder="Имя"
@@ -1054,7 +1050,7 @@
 										<span>Введите имя</span>
 									</label>
 									<input
-										name="contact-input"
+										name="contactInput"
 										class="contact__input"
 										type="tel"
 										placeholder="Телефон"
@@ -1281,10 +1277,11 @@
 				<p class="modal__text">
 					Оставьте свой e-mail, и мы вышлем рецепт на почту
 				</p>
-				<form class="modal__form">
+				<form class="modal__form" id="modal__form">
 					<label class="modal__form-label field">
 						<input
 							class="modal__form-input field__input"
+							name="modalFormInput"
 							type="email"
 							required
 							placeholder="E-mail"
